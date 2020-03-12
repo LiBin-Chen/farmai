@@ -9,6 +9,7 @@
 '''
 import os
 import sys
+from flask_cors import CORS
 
 from flask import Flask
 
@@ -23,6 +24,9 @@ except ImportError:
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
+
+    # enable CORS
+    CORS(app)
 
     # 注册blueprint
     from app.api import bp as api_bp
