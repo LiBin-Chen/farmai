@@ -10,8 +10,10 @@
 import os
 import sys
 from flask_cors import CORS
-
 from flask import Flask
+from flask_migrate import Migrate
+
+from flask_sqlalchemy import SQLAlchemy
 
 try:
     from config import Config
@@ -20,6 +22,11 @@ except ImportError:
     sys.path.insert(0, _path)
     from config import Config
 
+# Flask-SALAlchemy plugin
+db = SQLAlchemy()
+# Flask-Migrate plugin
+migrate = Migrate()
+
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -27,9 +34,16 @@ def create_app(config_class=Config):
 
     # enable CORS
     CORS(app)
+    # init flask-SQLAlchemy
+    db.init_app(app)
+    # init flask-Migrate
+    migrate.init_app(app, db)
 
     # 注册blueprint
     from app.api import bp as api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
     return app
+
+
+from app import models
