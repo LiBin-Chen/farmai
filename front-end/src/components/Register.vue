@@ -6,21 +6,19 @@
         <form @submit.prevent="onSubmit">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" v-model="registerForm.username" class="form-control"
-                   v-bind:class="{'is-invalid': registerForm.usernameError}" id="username" placeholder="">
-            <div v-show="registerForm.usernameError" class="invalid-feedback">{{registerForm.usernameError}}</div>
+            <input type="text" v-model="registerForm.username" class="form-control" v-bind:class="{'is-invalid': registerForm.usernameError}" id="username" placeholder="">
+            <div v-show="registerForm.usernameError" class="invalid-feedback">{{ registerForm.usernameError }}</div>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" v-model="registerForm.email" class="form-control"
-                   v-bind:class="{'is-invalid': registerForm.emailError}" id="email" placeholder="">
-            <div v-show="registerForm.emailError" class="invalid-feedback">{{registerForm.emailError}}</div>
+            <label for="email">Email address</label>
+            <input type="email" v-model="registerForm.email" class="form-control" v-bind:class="{'is-invalid': registerForm.emailError}" id="email" aria-describedby="emailHelp" placeholder="">
+            <small v-if="!registerForm.emailError" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div v-show="registerForm.emailError" class="invalid-feedback">{{ registerForm.emailError }}</div>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" v-model="registerForm.password" class="form-control"
-                   v-bind:class="{'is-invalid': registerForm.passwordError}" id="password" placeholder="">
-            <div v-show="registerForm.passwordError" class="invalid-feedback">{{registerForm.passwordError}}</div>
+            <input type="password" v-model="registerForm.password" class="form-control" v-bind:class="{'is-invalid': registerForm.passwordError}" id="password" placeholder="">
+            <div v-show="registerForm.passwordError" class="invalid-feedback">{{ registerForm.passwordError }}</div>
           </div>
           <button type="submit" class="btn btn-primary">Register</button>
         </form>
@@ -30,7 +28,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import store from '../store.js'
 
   export default {
@@ -80,16 +77,16 @@
           return false
         }
 
-        const path = 'http://localhost:500/api/users'
+        const path = '/users'
         const payload = {
           username: this.registerForm.username,
           email: this.registerForm.email,
           password: this.registerForm.password,
         }
-        axios.post(path, payload)
+        this.$axios.post(path, payload)
           .then((response) => {
             //handle success
-            store.setNewAction()
+            this.$toasted.success('Congratulations,you are now a registered user!', {icon: 'fingerprint'})
             this.$route.push('/login')
           })
           .catch((error) => {

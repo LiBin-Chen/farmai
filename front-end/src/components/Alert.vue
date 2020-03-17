@@ -10,7 +10,3 @@
     props: ['variant', 'message']
   }
 </script>
-
-<style scoped>
-
-</style>

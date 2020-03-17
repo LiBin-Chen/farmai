@@ -7,8 +7,12 @@
 @description
     说明
 """
+import os
 import re
+import sys
 
+_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+sys.path.insert(0, _path)
 from flask import request, jsonify, url_for
 
 from api.auth import token_auth

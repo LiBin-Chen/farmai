@@ -3,7 +3,6 @@
     <button type="button" class="btn btn-primary">
       {{msg}}
     </button>
-
   </div>
 </template>
 
@@ -18,8 +17,8 @@
     },
     methods: {
       getMessage() {
-        const path = 'http://localhost:5000/api/ping'
-        axios.get(path)
+        const path = '/ping'
+        this.$axios.get(path)
           .then((res) => {
             this.msg = res.data;
           })
