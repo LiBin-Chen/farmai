@@ -15,7 +15,7 @@
               <i class="icon-user-follow g-pos-rel g-top-1 g-mr-5"></i> Edit Profile
             </router-link>
             <!-- End Actions -->
-
+           
           </div>
 
           <div class="col-sm-9">
@@ -56,13 +56,13 @@
             <!-- End Location -->
 
             <div v-if="user.about_me">
-              <div class="u-divider u-divider-db-dashed u-divider-center g-brd-gray-light-v2 g-mt-50 g-mb-20">
+              <div class="u-divider u-divider-db-dashed u-divider-center g-brd-gray-light-v2 g-mt-50 g-mb-30">
                 <i class="u-divider__icon u-divider__icon--indented g-bg-gray-light-v4 g-color-gray-light-v1 rounded-circle">Me</i>
               </div>
-              <p class="lead g-line-height-1_8">{{ user.about_me }}</p>
+              <p class="g-line-height-1_8 g-font-weight-300">{{ user.about_me }}</p>
             </div>
 
-
+            
           </div>
         </div>
       </div>
@@ -71,56 +71,49 @@
 </template>
 
 <script>
-  import Alert from './Alert'
+import store from '../store'
 
-  export default {
-    name: "Profile",
-    comments: {
-      alert: Alert
-    },
-    data() {
-      return {
-        sharedState: store.state,
-        user: {
-          username: '',
-          email: '',
-          name: '',
-          location: '',
-          about_me: '',
-          member_since: '',
-          last_seen: '',
-          _links: {
-            self: '',
-            avatar: ''
-          },
+export default {
+  name: 'Profile',  //this is the name of the component
+  data () {
+    return {
+      sharedState: store.state,
+      user: {
+        username: '',
+        email: '',
+        name: '',
+        location: '',
+        about_me: '',
+        member_since: '',
+        last_seen: '',
+        _links: {
+          self: '',
+          avatar: ''
         }
       }
-    },
-    methods: {
-      getUser(id) {
-        const path = `/users${id}`
-        this.$axios.get(path)
-          .then((response) => {
-            this.user = response.data
-          })
-          .catch((error) => {
-            console.log(error)
-          });
-      },
-      created() {
-        const user_id = this.$route.params.id
-        this.getUser(user_id)
-      },
-      //当id变化后 重新加载数据
-      beforeRouteUpdate(to, from, next) {
-        this.getUser(to.params.id)
-        next()
-      }
     }
-
+  },
+  methods: {
+    getUser (id) {
+      const path = `/api/users/${id}`
+      this.$axios.get(path)
+        .then((response) => {
+          this.user = response.data
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.error(error)
+        });
+    }
+  },
+  created () {
+    const user_id = this.$route.params.id
+    this.getUser(user_id)
+  },
+  // 当 id 变化后重新加载数据
+  beforeRouteUpdate (to, from, next) {
+    this.getUser(to.params.id)
+    next()
   }
+}
 </script>
-
-<style scoped>
-
-</style>

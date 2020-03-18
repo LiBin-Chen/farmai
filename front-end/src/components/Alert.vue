@@ -1,12 +1,11 @@
 <template>
   <div class="alert" role="alert" v-bind:class="'alert-' + variant">
-    {{message}}
+    {{ message }}
   </div>
 </template>
 
 <script>
-  export default {
-    // name: "Alert"
-    props: ['variant', 'message']
-  }
+export default {
+  props: ['variant', 'message']
+}
 </script>
