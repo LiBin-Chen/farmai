@@ -1,19 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from app import create_app
+from app.extensions import db
+from app.models import User, Post
+from config import Config
 
 
-'''程序
+app = create_app(Config)
 
-@description
-    说明
-'''
 
-from .app import create_app, db
-from .app import models
-
-app = create_app()
-
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 @app.shell_context_processor
 def make_shell_context():
-    return {'db': db, 'models': models}
+    return {
+        'db': db,
+        'User': User,
+        'Post': Post}
