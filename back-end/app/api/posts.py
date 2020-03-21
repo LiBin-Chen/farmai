@@ -1,12 +1,12 @@
-from flask import request, jsonify, url_for, g
+from flask import request, jsonify, url_for, g, current_app
 from app.api import bp
 from app.api.auth import token_auth
 from app.api.errors import error_response, bad_request
 from app.extensions import db
-from app.models import Post
+from app.models import Post, Comment
 
 
-@bp.route('/posts', methods=['POST'])
+@bp.route('/posts/', methods=['POST'])
 @token_auth.login_required
 def create_post():
     '''添加一篇新文章'''
@@ -27,6 +27,9 @@ def create_post():
     post.from_dict(data)
     post.author = g.current_user  # 通过 auth.py 中 verify_token() 传递过来的（同一个request中，需要先进行 Token 认证）
     db.session.add(post)
+    # 给文章作者的所有 粉丝发送新文章通知
+    for user in post.author.followers:
+        user.add_notification('unread_followeds_posts_count', user.new_followeds_posts())
     db.session.commit()
     response = jsonify(post.to_dict())
     response.status_code = 201
@@ -51,6 +54,26 @@ def get_post(id):
     post.views += 1
     db.session.add(post)
     db.session.commit()
+
+    data = post.to_dict()
+    # 下一篇文章
+    next_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp > post.timestamp)
+    if next_basequery.all():
+        data['next_id'] = next_basequery[-1].id
+        data['next_title'] = next_basequery[-1].title
+        data['_links']['next'] = url_for('api.get_post', id=next_basequery[-1].id)
+    else:
+        data['_links']['next'] = None
+
+    # 上一篇文章
+    prev_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp < post.timestamp)
+    if prev_basequery.first():
+        data['prev_id'] = next_basequery.first()[-1].id
+        data['prev_title'] = next_basequery.first()[-1].title
+        data['_links']['prev'] = url_for('api.get_post', id=next_basequery.first()[-1].id)
+    else:
+        data['_links']['prev']=None
+
     return jsonify(post.to_dict())
 
 
@@ -88,5 +111,36 @@ def delete_post(id):
     if g.current_user != post.author:
         return error_response(403)
     db.session.delete(post)
+    # 需自动减1
+    for user in post.author.followers:
+        user.add_notification('unread_followeds_posts_count',
+                              user.new_followeds_posts())
     db.session.commit()
     return '', 204
+
+
+@bp.route('/posts/<int:id>/comments/', methods=["GET"])
+def get_post_comments(id):
+    """
+    返回当前文章下面的一级评论
+    :param id:
+    :return:
+    """
+    post = Post.query.get_or_404(id)
+    page = request.args.get('page', 1, type=int)
+    per_page = min(request.args.get('per_page', current_app.config['COMMENTS_PER_PAGE'], type=int), 100)
+
+    # 先获取一级评论
+    data = Comment.to_collection_dict(post.comments.filter(Comment.parent == None).order_by(Comment.timestamp.desc()),
+                                      page, per_page, 'api.get_post_comments', id=id)
+
+    # 再添加子孙到一级评论的descendants属性上
+
+    for item in data['item']:
+        comment = Comment.query.get(item['id'])
+        descendants = [child.to_dict() for child in comment.get_descendants()]
+        # 按照timestamp排序一个字典列表
+        from operator import itemgetter
+        item['descendants'] = sorted(descendants, key=itemgetter('timestamp'))
+
+    return jsonify(data)
