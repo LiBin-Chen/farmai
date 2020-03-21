@@ -7,7 +7,7 @@ from app.api import bp
 from app.api.auth import token_auth
 from app.api.errors import bad_request, error_response
 from app.extensions import db
-from app.models import User, Notification, Post, Comment, comments_likes, Message
+from app.models import User, Notification, Post, Comment, comments_likes, Message, posts_likes
 
 
 @bp.route('/users', methods=['POST'])
@@ -404,7 +404,7 @@ def get_user_recived_likes(id):
                 data['comment'] = c.to_dict()
                 # 获取点赞时间
                 res = db.engine.execute(
-                    'select * from comment_likes where user_id={} and comment_id={}'.format(u.id, c.id))
+                    'select * from comments_likes where user_id={} and comment_id={}'.format(u.id, c.id))
                 data['timestamp'] = datetime.datetime.strftime(list(res)[0][2], '%Y-%m-%d %H:%M:%S.%f')
                 # 标记本条点赞记录是否为新的
                 last_read_time = user.last_likes_read_time or datetime.datetime(1990, 1, 1)
@@ -511,7 +511,7 @@ def get_user_history_messages(id):
 拉黑与取消拉黑'''
 
 
-@bp.route('/block/<int:id>', methods=['GET'])
+@bp.route('/users/block/<int:id>', methods=['GET'])
 @token_auth.login_required
 def block(id):
     """
@@ -534,7 +534,7 @@ def block(id):
     })
 
 
-@bp.route('/unblock/<int:id>', methods=['GET'])
+@bp.route('/users/unblock/<int:id>', methods=['GET'])
 @token_auth.login_required
 def unblock(id):
     '''取消拉黑一个用户'''
@@ -549,3 +549,91 @@ def unblock(id):
         'status': 'success',
         'message': 'You are not blocking %s anymore.' % (user.name if user.name else user.username)
     })
+
+
+'''
+谁喜欢了你的文章'''
+
+
+@bp.route('users/<int:id>/recived-posts-likes', methods=['GET'])
+@token_auth.login_required
+def get_user_recived_posts_likes(id):
+    """
+    返回该用户收到的文章喜欢
+    :param id:
+    :return:
+    """
+
+    user = User.query.get_or_404(id)
+    if g.current_user != user:
+        return error_response(403)
+
+    page = request.args.get('page', 1, type=int)
+    per_page = min(
+        request.args.get(
+            'per_page', current_app.config['POSTS_PER_PAGE'], type=int), 100)
+
+    posts = user.posts.join(posts_likes).paginate(page, per_page)
+    # 喜欢记录
+    records = {
+        'items': [],
+        '_meta': {
+            'page': page,
+            'per_page': per_page,
+            'total_pages': posts.pages,
+            'total_items': posts.total
+        },
+        '_links': {
+            'self': url_for('api.get_user_recived_posts_likes', page=page, per_page=per_page, id=id),
+            'next': url_for('api.get_user_recived_posts_likes', page=page + 1, per_page=per_page,
+                            id=id) if posts.has_next else None,
+            'prev': url_for('api.get_user_recived_posts_likes', page=page - 1, per_page=per_page,
+                            id=id) if posts.has_prev else None,
+        }
+    }
+
+    for p in posts.items:
+        # 重组数据,变成 谁 什么时间 喜欢了你的 哪篇文章
+        for u in p.likes:
+            if u != user:
+                data = {}
+                data['user'] = u.to_dict()
+                data['post'] = p.to_dict()
+                # 获取喜欢时间
+                res = db.engine.execute('select * from posts_likes where user_id={} and post_id={}'.format(u.id, p.id))
+                data['timestamp'] = datetime.strptime(list(res)[0][2], '%Y-%m-%d %H:%M:%S.%f')
+                # 标记本条喜欢记录是否为新的
+                last_read_time = user.last_posts_likes_read_time or datetime(1900, 1, 1)
+                if data['timestamp'] > last_read_time:
+                    data['is_new'] = True
+                records['items'].append(data)
+
+    # 按timestamp倒序
+    records['items'] = sorted(records['items'], key=itemgetter('timestamp'), reverse=True)
+    # 更新last_posts_likes_read_time
+    user.last_posts_like_read_time = datetime.datetime.utcnow()
+    user.add_notification('unread_posts_likes_count', 0)
+    db.session.commit()
+    return jsonify(records)
+
+
+def get_user_liked_posts(id):
+    """
+    返回用户喜欢的文章
+    :param id:
+    :return:
+    """
+    user = User.query.get_or_404(id)
+    if g.current_user != user:
+        return error_response(403)
+
+    page = request.args.get('page', 1, type=int)
+    per_page = min(
+        request.args.get(
+            'per_page', current_app.config['POSTS_PER_PAGE'], type=int), 100)
+
+    data = Post.to_collection_dict(user.liked_posts.order_by(Post.timestamp.desc()), page, per_page,
+                                   'api.get_user_liked_posts', id=id)
+
+    return jsonify(data)
+
