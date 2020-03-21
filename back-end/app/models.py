@@ -126,6 +126,9 @@ class User(PaginatedAPIMixin, db.Model):
 
     last_posts_like_read_time = db.Column(db.DateTime)
 
+    # 账号确认
+    confirmed = db.Column(db.Boolean, default=False)
+
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
@@ -336,6 +339,50 @@ class User(PaginatedAPIMixin, db.Model):
                         new_likes_count += 1
 
         return new_likes_count
+
+    def generate_confirm_jwt(self, expires_in=3600):
+        """
+        生成确认账户的 JWT
+        :param expires_in:
+        :return:
+        """
+        now = datetime.utcnow()
+        payload = {
+            'confirm': self.id,
+            'exp': now + timedelta(seconds=expires_in),
+            'iat': now
+        }
+        return jwt.encode(
+            payload,
+            current_app.config['SECRET_KEY'],
+            algorithm='HS256'
+        ).decode('utf-8')
+
+    def verify_confirm_jwt(self, token):
+        """
+        用户点击邮件进行确认,校验jwt,通过则修改confirmed状态
+        :param token:
+        :return:
+        """
+        try:
+            payload = jwt.decode(
+                token,
+                current_app.config['SECRET_KEY'],
+                algorithms=['HS256']
+            )
+        except(
+                jwt.exceptions.ExpiredSignatureError,
+                jwt.exceptions.InvalidSignatureError,
+                jwt.exceptions.DecodeError
+        ) as e:
+            # 校验失败
+            return False
+        if payload.get('confirm') != self.id:
+            return False
+        self.confirmed = True
+        db.session.add(self)
+        db.session.commit()
+        return True
 
 
 class Post(PaginatedAPIMixin, db.Model):

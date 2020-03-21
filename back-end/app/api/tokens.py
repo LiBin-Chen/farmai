@@ -12,3 +12,6 @@ def get_token():
     g.current_user.ping()
     db.session.commit()
     return jsonify({'token': token})
+
+
+

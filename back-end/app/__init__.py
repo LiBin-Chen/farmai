@@ -1,6 +1,6 @@
 from flask import Flask
 from app.api import bp as api_bp
-from app.extensions import cors, db, migrate
+from app.extensions import cors, db, migrate, mail
 
 
 def create_app(config_class=None):
@@ -38,6 +38,7 @@ def configure_extensions(app):
     cors.init_app(app)
     # Init Flask-SQLAlchemy
     db.init_app(app)
+    mail.init_app(app)
     # Init Flask-Migrate
     migrate.init_app(app, db)
 
