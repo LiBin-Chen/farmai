@@ -50,6 +50,7 @@ def configure_extensions(app):
     cors.init_app(app)
     # Init Flask-SQLAlchemy
     db.init_app(app)
+    mail.init_app(app)
     # Init Flask-Migrate
     migrate.init_app(app, db)
     mail.init_app(app)

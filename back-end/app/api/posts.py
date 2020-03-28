@@ -122,6 +122,7 @@ def delete_post(id):
 
 
 @bp.route('/posts/<int:id>/comments/', methods=["GET"])
+@token_auth.login_required
 def get_post_comments(id):
     """
     返回当前文章下面的一级评论
@@ -146,3 +147,48 @@ def get_post_comments(id):
         item['descendants'] = sorted(descendants, key=itemgetter('timestamp'))
 
     return jsonify(data)
+
+
+@bp.route('posts/<int:id>/like', methods=['GET'])
+@token_auth.login_required
+def like_post(id):
+    """
+    喜欢文章
+    :param id:
+    :return:
+    """
+    post = Post.query.get_or_404(id)
+    post.liked_by(g.current_user)
+    db.session.add(post)
+    # 需要先提交到数据库,才能给作者发送新通知
+    db.session.commit()
+
+    post.author.add_notification('unread_posts_likes_count', post.author.new_posts_likes())
+    db.session.commit()
+
+    return jsonify({
+        'status': 'success',
+        'message': 'You are now liking this post.'
+    })
+
+@bp.route('posts/<int:id>/like', methods=['GET'])
+@token_auth.login_required
+def unlike_post(id):
+    """
+    喜欢文章
+    :param id:
+    :return:
+    """
+    post = Post.query.get_or_404(id)
+    post.unliked_by(g.current_user)
+    db.session.add(post)
+    # 需要先提交到数据库,才能给作者发送新通知
+    db.session.commit()
+
+    post.author.add_notification('unread_posts_likes_count', post.author.new_posts_likes())
+    db.session.commit()
+
+    return jsonify({
+        'status': 'success',
+        'message': 'You are not liking this post anymore.'
+    })
