@@ -13,11 +13,13 @@ from app.extensions import db
 from app.api import bp
 from app.api.auth import token_auth
 from app.api.errors import error_response, bad_request
-from app.models import Post, Comment
+from app.models import Post, Comment, Permission
+from app.utils.decorators import permission_required
 
 
 @bp.route('/comments', methods=['POST'])
 @token_auth.login_required
+@permission_required(Permission.COMMENT)
 def create_comment():
     """
     发表评论
@@ -118,7 +120,8 @@ def delete_comment(id):
     :return:
     """
     comment = Comment.query.get_or_404(id)
-    if g.current_user != comment.author and g.current_user != comment.post.author:
+    if g.current_user != comment.author and g.current_user != comment.post.author and not g.current_user.can(
+            Permission.ADMIN):
         return error_response(403)
 
     # 删除评论时:
@@ -145,6 +148,7 @@ def delete_comment(id):
 
 @bp.route('/comments/<int:id>/like', methods=['GET'])
 @token_auth.login_required
+@permission_required(Permission.COMMENT)
 def like_comments(id):
     """
     点赞评论
@@ -166,6 +170,8 @@ def like_comments(id):
 
 
 @bp.route('/comments/<int:id>/unlike', methods=['GET'])
+@token_auth.login_required
+@permission_required(Permission.COMMENT)
 def unlike_comment(id):
     """
     取消点赞评论

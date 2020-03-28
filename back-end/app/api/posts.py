@@ -3,11 +3,13 @@ from app.api import bp
 from app.api.auth import token_auth
 from app.api.errors import error_response, bad_request
 from app.extensions import db
-from app.models import Post, Comment
+from app.models import Post, Comment, Permission
+from app.utils.decorators import permission_required
 
 
 @bp.route('/posts/', methods=['POST'])
 @token_auth.login_required
+@permission_required(Permission.WRITE)
 def create_post():
     '''添加一篇新文章'''
     data = request.get_json()
@@ -72,7 +74,7 @@ def get_post(id):
         data['prev_title'] = next_basequery.first()[-1].title
         data['_links']['prev'] = url_for('api.get_post', id=next_basequery.first()[-1].id)
     else:
-        data['_links']['prev']=None
+        data['_links']['prev'] = None
 
     return jsonify(post.to_dict())
 
@@ -108,7 +110,7 @@ def update_post(id):
 def delete_post(id):
     '''删除一篇文章'''
     post = Post.query.get_or_404(id)
-    if g.current_user != post.author:
+    if g.current_user != post.author and not g.current_user.can(Permission.ADMIN):
         return error_response(403)
     db.session.delete(post)
     # 需自动减1

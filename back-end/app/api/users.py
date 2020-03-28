@@ -7,7 +7,8 @@ from app.api import bp
 from app.api.auth import token_auth
 from app.api.errors import bad_request, error_response
 from app.extensions import db
-from app.models import User, Notification, Post, Comment, comments_likes, Message
+from app.models import User, Notification, Post, Comment, comments_likes, Message, Permission, Task
+from app.utils.decorators import permission_required
 
 
 @bp.route('/users', methods=['POST'])
@@ -101,7 +102,7 @@ def update_user(id):
 def delete_user(id):
     '''删除一个用户'''
     user = User.query.get_or_404(id)
-    if g.current_user != user:
+    if g.current_user != user and not g.current_user.can(Permission.ADMIN):
         return error_response(403)
     db.session.delete(user)
     db.session.commit()
@@ -182,6 +183,7 @@ def unfollow(id):
 
 @bp.route('/users/<int:id>/followeds/', methods=['GET'])
 @token_auth.login_required
+@permission_required(Permission.FOLLOW)
 def get_followeds(id):
     """
     :param id:
@@ -209,6 +211,7 @@ def get_followeds(id):
 
 @bp.route('/users/<int:id>/followers/', methods=['GET'])
 @token_auth.login_required
+@permission_required(Permission.FOLLOW)
 def get_followers(id):
     """
     返回用户的粉丝列表
@@ -513,6 +516,7 @@ def get_user_history_messages(id):
 
 @bp.route('/block/<int:id>', methods=['GET'])
 @token_auth.login_required
+@permission_required(Permission.FOLLOW)
 def block(id):
     """
     开始拉黑一个用户
@@ -536,6 +540,7 @@ def block(id):
 
 @bp.route('/unblock/<int:id>', methods=['GET'])
 @token_auth.login_required
+@permission_required(Permission.FOLLOW)
 def unblock(id):
     '''取消拉黑一个用户'''
     user = User.query.get_or_404(id)
@@ -549,3 +554,24 @@ def unblock(id):
         'status': 'success',
         'message': 'You are not blocking %s anymore.' % (user.name if user.name else user.username)
     })
+
+
+@bp.route('/users/<int:id>/tasks/', methods=['GET'])
+@token_auth.login_required
+def get_user_tasks_in_progress():
+    """
+    返回用户所有 正在运行中的后台任务
+    :return:
+    """
+    user = User.query.get_or_404(id)
+    if g.current_user != user:
+        return bad_request(403)
+    page = request.args.get('page', 1, type=int)
+    per_page = min(
+        request.args.get(
+            'per_page', current_app.config['TASKS_PER_PAGE'], type=int), 100)
+
+    data = Task.to_collection_dict(
+        Task.query.filter_by(user=user, complete=False).all(), page, per_page,
+        'api.get_user_tasks_in_progress', id=id)
+    return jsonify(data)
