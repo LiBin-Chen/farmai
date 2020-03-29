@@ -14,7 +14,6 @@ def verify_password(username, password):
     user = User.query.filter_by(username=username).first()
     if user is None:
         return False
-    # 通过basic auth后将user赋给g.current_user
     g.current_user = user
     return user.check_password(password)
 

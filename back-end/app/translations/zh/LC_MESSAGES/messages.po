@@ -1,0 +1,129 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-04-20 18:00+0800\n"
+"PO-Revision-Date: 2019-04-19 23:05+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: madblog.py:22
+msgid "Hello, World!"
+msgstr "世界，你好！"
+
+#: app/api/users.py:20 app/api/users.py:115 app/api/users.py:676
+#: app/api/users.py:738 app/api/users.py:790 app/api/users.py:810
+msgid "You must post JSON data."
+msgstr "只接受 JSON 格式数据"
+
+#: app/api/users.py:24 app/api/users.py:119
+msgid "Please provide a valid username."
+msgstr "请输入合法有效的用户名"
+
+#: app/api/users.py:27 app/api/users.py:123 app/api/users.py:745
+msgid "Please provide a valid email address."
+msgstr "请输入合法有效的邮箱地址"
+
+#: app/api/users.py:29 app/api/users.py:792
+msgid "Please provide a valid password."
+msgstr "请输入合法有效的密码"
+
+#: app/api/users.py:32 app/api/users.py:127
+msgid "Please use a different username."
+msgstr "请输入其它用户名"
+
+#: app/api/users.py:34 app/api/users.py:130
+msgid "Please use a different email address."
+msgstr "请输入其它邮箱地址"
+
+#: app/api/users.py:177
+msgid "You cannot follow yourself."
+msgstr "你不能关注你自己"
+
+#: app/api/users.py:179
+msgid "You have already followed that user."
+msgstr "你之前已经关注过此用户了"
+
+#: app/api/users.py:187
+#, python-format
+msgid "You are now following %(username)s."
+msgstr "你已成功关注了%(username)s"
+
+#: app/api/users.py:208
+#, python-format
+msgid "You are not following %(username)s anymore."
+msgstr "你已成功取消关注%(username)s"
+
+#: app/api/users.py:648
+#, python-format
+msgid "You are now blocking %(username)s."
+msgstr "你已成功拉黑 %(username)s"
+
+#: app/api/users.py:666
+#, python-format
+msgid "You are not blocking %(username)s anymore."
+msgstr "你已成功将 %(username)s 移除黑名单"
+
+#: app/api/users.py:678 app/api/users.py:742
+msgid "Please provide a valid confirm email base url."
+msgstr "请提供有效的邮箱地址"
+
+#: app/api/users.py:709
+msgid "A new confirmation email has been sent to you by email."
+msgstr "新的确认账户邮件已发送到你的邮箱中"
+
+#: app/api/users.py:718
+msgid "You have already confirmed your account."
+msgstr "你之前已确认过账户啦"
+
+#: app/api/users.py:726
+msgid "You have confirmed your account. Thanks!"
+msgstr "你已成功确认账户，谢谢"
+
+#: app/api/users.py:730
+msgid "The confirmation link is invalid or has expired."
+msgstr "确认账户的链接无效或已过期"
+
+#: app/api/users.py:781
+msgid "An email with instructions to reset your password has been sent to you."
+msgstr "重置密码的邮件已发送到你的邮箱"
+
+#: app/api/users.py:795
+msgid "The reset password link is invalid or has expired."
+msgstr "重置密码的链接无效或已过期"
+
+#: app/api/users.py:800
+msgid "Your password has been reset."
+msgstr "你的密码已成功重置"
+
+#: app/api/users.py:813
+msgid "Please provide a valid old password."
+msgstr "请提供有效的旧密码"
+
+#: app/api/users.py:815
+msgid "Please provide a valid new password."
+msgstr "请提供有效的新密码"
+
+#: app/api/users.py:817
+msgid "The new password is equal to the old password."
+msgstr "新密码不能与旧密码相同"
+
+#: app/api/users.py:820
+msgid "The old password is wrong."
+msgstr "旧密码不正确"
+
+#: app/api/users.py:825
+msgid "Your password has been updated."
+msgstr "你已成功更新密码"
+
