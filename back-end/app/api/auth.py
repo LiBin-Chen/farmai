@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from flask import g
 from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from app.api.errors import error_response

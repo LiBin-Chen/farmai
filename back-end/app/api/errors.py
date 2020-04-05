@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from flask import jsonify
 from werkzeug.http import HTTP_STATUS_CODES
 from app.api import bp

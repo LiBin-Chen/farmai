@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from flask import render_template_string
 from flask_restful import Resource
 from app.api_v2.common.utils import output_html

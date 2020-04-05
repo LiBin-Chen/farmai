@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from functools import wraps
 from flask import g
 from app.api.errors import error_response

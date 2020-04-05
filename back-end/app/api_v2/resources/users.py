@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from flask import url_for, request
 from flask_restful import Resource, reqparse, inputs, fields, marshal_with
 from app.api.auth import token_auth

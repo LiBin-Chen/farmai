@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
+
 from flask import request, jsonify, url_for, g, current_app
 from app.api import bp
 from app.api.auth import token_auth
@@ -136,7 +146,7 @@ def get_post_comments(id):
             'per_page', current_app.config['COMMENTS_PER_PAGE'], type=int), 100)
     # 先获取一级评论
     data = Comment.to_collection_dict(
-        post.comments.filter(Comment.parent==None).order_by(Comment.timestamp.desc()), page, per_page,
+        post.comments.filter(Comment.parent == None).order_by(Comment.timestamp.desc()), page, per_page,
         'api.get_post_comments', id=id)
     # 再添加子孙到一级评论的 descendants 属性上
     for item in data['items']:
@@ -216,29 +226,31 @@ def search():
     per_page = min(
         request.args.get(
             'per_page', current_app.config['POSTS_PER_PAGE'], type=int), 100)
+    # TODO 将es搜索替代成其他方案
 
-    total, hits_basequery = Post.search(q, page, per_page)
-    # 总页数
-    total_pages, div = divmod(total, per_page)
-    if div > 0:
-        total_pages += 1
-
-    # 不能使用 Post.to_collection_dict()，因为查询结果已经分页过了
-    data = {
-        'items': [item.to_dict() for item in hits_basequery],
-        '_meta': {
-            'page': page,
-            'per_page': per_page,
-            'total_pages': total_pages,
-            'total_items': total
-        },
-        '_links': {
-            'self': url_for('api.search', q=q, page=page, per_page=per_page),
-            'next': url_for('api.search', q=q, page=page + 1, per_page=per_page) if page < total_pages else None,
-            'prev': url_for('api.search', q=q, page=page - 1, per_page=per_page) if page > 1 else None
-        }
-    }
-    return jsonify(data=data, message='Total items: {}, current page: {}'.format(total, page))
+    return jsonify({'msg': '将es搜索替代成其他方案'})
+    # total, hits_basequery = Post.search(q, page, per_page)
+    # # 总页数
+    # total_pages, div = divmod(total, per_page)
+    # if div > 0:
+    #     total_pages += 1
+    #
+    # # 不能使用 Post.to_collection_dict()，因为查询结果已经分页过了
+    # data = {
+    #     'items': [item.to_dict() for item in hits_basequery],
+    #     '_meta': {
+    #         'page': page,
+    #         'per_page': per_page,
+    #         'total_pages': total_pages,
+    #         'total_items': total
+    #     },
+    #     '_links': {
+    #         'self': url_for('api.search', q=q, page=page, per_page=per_page),
+    #         'next': url_for('api.search', q=q, page=page + 1, per_page=per_page) if page < total_pages else None,
+    #         'prev': url_for('api.search', q=q, page=page - 1, per_page=per_page) if page > 1 else None
+    #     }
+    # }
+    # return jsonify(data=data, message='Total items: {}, current page: {}'.format(total, page))
 
 
 @bp.route('/search/post-detail/<int:id>', methods=['GET'])
@@ -247,29 +259,33 @@ def get_search_post(id):
     q = request.args.get('q')
     page = request.args.get('page', type=int)
     per_page = request.args.get('per_page', type=int)
+    # TODO 将es搜索替代成其他方案
 
-    if q and page and per_page:  # 说明是从搜索结果页中过来查看文章详情的，所以要高亮关键字
-        total, hits_basequery = Post.search(q, page, per_page)
-        post = hits_basequery.first()  # 只会有唯一的一篇文章
-        data = post.to_dict()  # 会高亮关键字
-    else:
-        post = Post.query.get_or_404(id)
-        data = post.to_dict()  # 不会高亮关键字
-
-    # 下一篇文章
-    next_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp > post.timestamp)
-    if next_basequery.all():
-        data['next_id'] = next_basequery[-1].id
-        data['next_title'] = next_basequery[-1].title
-        data['_links']['next'] = url_for('api.get_post', id=next_basequery[-1].id)
-    else:
-        data['_links']['next'] = None
-    # 上一篇文章
-    prev_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp < post.timestamp)
-    if prev_basequery.first():
-        data['prev_id'] = prev_basequery.first().id
-        data['prev_title'] = prev_basequery.first().title
-        data['_links']['prev'] = url_for('api.get_post', id=prev_basequery.first().id)
-    else:
-        data['_links']['prev'] = None
-    return jsonify(data)
+    return jsonify({'msg': '将es搜索替代成其他方案'})
+    # if q and page and per_page:  # 说明是从搜索结果页中过来查看文章详情的，所以要高亮关键字
+    #     # total, hits_basequery = Post.search(q, page, per_page)
+    #     # post = hits_basequery.first()  # 只会有唯一的一篇文章
+    #     # data = post.to_dict()  # 会高亮关键字
+    #
+    #     pass
+    # else:
+    #     post = Post.query.get_or_404(id)
+    #     data = post.to_dict()  # 不会高亮关键字
+    #
+    # # 下一篇文章
+    # next_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp > post.timestamp)
+    # if next_basequery.all():
+    #     data['next_id'] = next_basequery[-1].id
+    #     data['next_title'] = next_basequery[-1].title
+    #     data['_links']['next'] = url_for('api.get_post', id=next_basequery[-1].id)
+    # else:
+    #     data['_links']['next'] = None
+    # # 上一篇文章
+    # prev_basequery = Post.query.order_by(Post.timestamp.desc()).filter(Post.timestamp < post.timestamp)
+    # if prev_basequery.first():
+    #     data['prev_id'] = prev_basequery.first().id
+    #     data['prev_title'] = prev_basequery.first().title
+    #     data['_links']['prev'] = url_for('api.get_post', id=prev_basequery.first().id)
+    # else:
+    #     data['_links']['prev'] = None
+    # return jsonify(data)

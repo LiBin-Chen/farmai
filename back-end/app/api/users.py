@@ -9,6 +9,15 @@ from app.api.errors import bad_request, error_response
 from app.extensions import db
 from app.models import Permission, comments_likes, posts_likes, User, Post, Comment, Notification, Message, Task
 from app.utils.email import send_email
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from app.utils.decorator import permission_required
 
 

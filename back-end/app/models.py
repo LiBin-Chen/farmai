@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
+
 import base64
 from datetime import datetime, timedelta
 from hashlib import md5
@@ -7,67 +17,67 @@ from time import time
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import url_for, current_app
 from app.extensions import db
-from app.utils.elasticsearch import add_to_index, remove_from_index, query_index, es_highlight
+# from app.utils.elasticsearch import add_to_index, remove_from_index, query_index, es_highlight
 
 
-class SearchableMixin(object):
-    @classmethod
-    def search(cls, query, page, per_page, ids=None):
-        total, hits, highlights = query_index(cls.__tablename__, query, page, per_page, ids)
+# class SearchableMixin(object):
+#     @classmethod
+#     def search(cls, query, page, per_page, ids=None):
+#         total, hits, highlights = query_index(cls.__tablename__, query, page, per_page, ids)
+#
+#         if total == 0:
+#             return 0, cls.query.filter_by(id=0)  # 如果没有匹配到搜索词，则故意返回空的 BaseQuery
+#
+#         hit_ids = []  # 匹配到的记录，id 列表
+#         when = []
+#         for i in range(len(hits)):
+#             hit_ids.append(hits[i][0])
+#             when.append((hits[i][0], i))
+#         # 将 hit_ids 列表转换成对应排序顺序(ES搜索得分高排在前面)的 BaseQuery，请参考: https://stackoverflow.com/questions/6332043/sql-order-by-multiple-values-in-specific-order/6332081#6332081
+#         hits_basequery = cls.query.filter(cls.id.in_(hit_ids)).order_by(db.case(when, value=cls.id))
+#         # 再遍历 BaseQuery，将要搜索的字段值中关键词高亮
+#         for obj in hits_basequery:
+#             for field, need_highlight in obj.__searchable__:
+#                 if need_highlight:  # 只有设置为 True 的字段才高亮关键字
+#                     source = getattr(obj, field)  # 原字段的值
+#                     highlight_source = es_highlight(source, highlights)  # 关键字高亮后的字段值
+#                     setattr(obj, field, highlight_source)
+#
+#         return total, hits_basequery
+#
+#     @classmethod
+#     def receive_after_insert(cls, mapper, connection, target):
+#         '''监听 SQLAlchemy 'after_insert' 事件
+#         请参考: https://docs.sqlalchemy.org/en/13/orm/events.html#mapper-events'''
+#         add_to_index(target.__tablename__, target)
+#
+#     @classmethod
+#     def before_commit(cls, session):
+#         session._changes = {
+#             'update': list(session.dirty)
+#         }
+#
+#     @classmethod
+#     def after_commit(cls, session):
+#         for obj in session._changes['update']:
+#             if isinstance(obj, SearchableMixin):
+#                 add_to_index(obj.__tablename__, obj)
+#         session._changes = None
+#
+#     @classmethod
+#     def receive_after_delete(cls, mapper, connection, target):
+#         '''监听 SQLAlchemy 'after_delete' 事件'''
+#         remove_from_index(target.__tablename__, target)
+#
+#     @classmethod
+#     def reindex(cls):
+#         '''刷新指定数据模型中的所有数据的索引'''
+#         for obj in cls.query:
+#             add_to_index(cls.__tablename__, obj)
 
-        if total == 0:
-            return 0, cls.query.filter_by(id=0)  # 如果没有匹配到搜索词，则故意返回空的 BaseQuery
-
-        hit_ids = []  # 匹配到的记录，id 列表
-        when = []
-        for i in range(len(hits)):
-            hit_ids.append(hits[i][0])
-            when.append((hits[i][0], i))
-        # 将 hit_ids 列表转换成对应排序顺序(ES搜索得分高排在前面)的 BaseQuery，请参考: https://stackoverflow.com/questions/6332043/sql-order-by-multiple-values-in-specific-order/6332081#6332081
-        hits_basequery = cls.query.filter(cls.id.in_(hit_ids)).order_by(db.case(when, value=cls.id))
-        # 再遍历 BaseQuery，将要搜索的字段值中关键词高亮
-        for obj in hits_basequery:
-            for field, need_highlight in obj.__searchable__:
-                if need_highlight:  # 只有设置为 True 的字段才高亮关键字
-                    source = getattr(obj, field)  # 原字段的值
-                    highlight_source = es_highlight(source, highlights)  # 关键字高亮后的字段值
-                    setattr(obj, field, highlight_source)
-
-        return total, hits_basequery
-
-    @classmethod
-    def receive_after_insert(cls, mapper, connection, target):
-        '''监听 SQLAlchemy 'after_insert' 事件
-        请参考: https://docs.sqlalchemy.org/en/13/orm/events.html#mapper-events'''
-        add_to_index(target.__tablename__, target)
-
-    @classmethod
-    def before_commit(cls, session):
-        session._changes = {
-            'update': list(session.dirty)
-        }
-
-    @classmethod
-    def after_commit(cls, session):
-        for obj in session._changes['update']:
-            if isinstance(obj, SearchableMixin):
-                add_to_index(obj.__tablename__, obj)
-        session._changes = None
-
-    @classmethod
-    def receive_after_delete(cls, mapper, connection, target):
-        '''监听 SQLAlchemy 'after_delete' 事件'''
-        remove_from_index(target.__tablename__, target)
-
-    @classmethod
-    def reindex(cls):
-        '''刷新指定数据模型中的所有数据的索引'''
-        for obj in cls.query:
-            add_to_index(cls.__tablename__, obj)
-
-
-db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
-db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
+#
+# db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
+# db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
 
 
 class PaginatedAPIMixin(object):
@@ -609,7 +619,7 @@ class User(PaginatedAPIMixin, db.Model):
         return '<User {}>'.format(self.username)
 
 
-class Post(SearchableMixin, PaginatedAPIMixin, db.Model):
+class Post( PaginatedAPIMixin, db.Model):
     __tablename__ = 'posts'
     __searchable__ = [('title', True), ('summary', True), ('body', False)]
     id = db.Column(db.Integer, primary_key=True)
@@ -692,8 +702,8 @@ class Post(SearchableMixin, PaginatedAPIMixin, db.Model):
 
 
 db.event.listen(Post.body, 'set', Post.on_changed_body)  # body 字段有变化时，执行 on_changed_body() 方法
-db.event.listen(Post, 'after_insert', Post.receive_after_insert)
-db.event.listen(Post, 'after_delete', Post.receive_after_delete)
+# db.event.listen(Post, 'after_insert', Post.receive_after_insert)
+# db.event.listen(Post, 'after_delete', Post.receive_after_delete)
 
 
 class Comment(PaginatedAPIMixin, db.Model):

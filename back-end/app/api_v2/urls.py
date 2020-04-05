@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from app.api_v2.app import api
 from app.api_v2.resources.ping import Ping
 from app.api_v2.resources.users import UserAPI, UserListAPI

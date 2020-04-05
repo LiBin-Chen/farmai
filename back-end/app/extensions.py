@@ -1,5 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
+
 ''' Create instance of these flask extensions '''
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy

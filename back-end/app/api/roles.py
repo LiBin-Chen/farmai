@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
 from flask import request, url_for, jsonify
 from app.api import bp
 from app.api.auth import token_auth

@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+'''程序
+
+@description
+    说明
+'''
+
 from flask import Blueprint
 
 bp = Blueprint('api', __name__)
