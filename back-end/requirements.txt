@@ -1,6 +1,6 @@
 alembic==1.0.2
 aniso8601==7.0.0
-arrow==0.13.1
+arrow==0.15.1
 asn1crypto==0.24.0
 Babel==2.6.0
 blinker==1.4
