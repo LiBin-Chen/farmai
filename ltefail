@@ -1,0 +1,16 @@
+Rssi[-35.000dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -35.00  [-37.00, -33.00]        dBm     
+Rssi[-45.000dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -45.00  [-47.00, -43.00]        dBm     
+Rssi[-55.000dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -54.88  [-57.00, -53.00]        dBm     
+Rssi[-65.000dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -64.88  [-67.00, -63.00]        dBm     
+Rssi[-75.000dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -74.88  [-77.00, -73.00]        dBm     
+Rsl[-93.500dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0001][23.500dBm][Mpr 1.000dB][QPSK][25_25][Snr][segNo 2]                            Fail      1              -5.44   [-1.00, nan]            dB      
+Rsl[-93.500dBm][Rx_QPSK][Path 21][SoftAnt 0][PhyAnt 0][TxAntMap 0x0001][23.500dBm][Mpr 1.000dB][QPSK][25_25][Decode][segNo 2]                         Fail      1              0.00    [95.00, 100.00]         pct     
+Rssi[-35.000dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -35.75  [-37.00, -33.00]        dBm     
+Rssi[-45.000dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -45.25  [-47.00, -43.00]        dBm     
+Rssi[-55.000dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -54.50  [-57.00, -53.00]        dBm     
+Rssi[-65.000dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -64.63  [-67.00, -63.00]        dBm     
+Rssi[-75.000dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][segNo 1]                                                                     Pass      1              -74.38  [-77.00, -73.00]        dBm     
+Rsl[-93.500dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][Snr][segNo 2]                                                                 Pass      1              7.75    [-1.00, nan]            dB      
+Rsl[-93.500dBm][Rx_QPSK][Path 21][SoftAnt 1][PhyAnt 1][TxAntMap 0x0000][Decode][segNo 2]                                                              Pass      1              100.00  [95.00, 100.00]         pct 
+
+FreqError[TxAntMap 0x0001][23.500dBm][Mpr 1.000dB][QPSK][0_50][PowerClass3][Path 8][DpdOnLine 0][SoftAnt 0][PhyAnt 0][segNo 7]                        Fail      1              160.95  [-97.90, 97.90]         Hz 
