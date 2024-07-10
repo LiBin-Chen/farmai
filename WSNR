@@ -1,0 +1,4 @@
+Rssi [0.0 dBm][TpcEn_0][RxPath 2][-75.0 dBm][Main Ant]                                                                                                Pass      1              -75.62  [-77.00, -73.00]        dBm     
+Snr [0.0 dBm][TpcEn_0][RxPath 2][-102.0 dBm][Main Ant]                                                                                                Fail      1              -100.50 [-999.00, -106.70]      dBm     
+Mil [24.5 dBm][TpcEn_0][RxPath 2][-25.0 dBm][Main Ant]                                                                                                Pass      1              0.00    [0.00, 0.10]            Percent 
+Ber [24.5 dBm][TpcEn_0][RxPath 2][-106.7 dBm][Main Ant]                                                                                               Pass      1              0.00    [0.00, 0.10]            Percent
