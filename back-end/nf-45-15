@@ -1,0 +1,397 @@
+<?xml version="1.0" standalone="yes"?>
+<Root>
+<Instrument type="winiqsim2" mode="family" version="5.20.107.25" servicepack="" serialnumber="0" byteOrder="littleEndian">
+<Module type="Database" version="1.0.0">
+<Database type="recall" subType="setting" function="digStd" saveType="differential" version="1.0.0">
+<Checksum type="crc32a" scope="block" value="#H7b516908">
+<Parameter pid="IdPDbNr5gUserUlBwpNumerology" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserUlBwpNumerology" hard="-1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gCarrierPointA" hard="-1" value="-21780000"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="2" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="3" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="4" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="5" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="6" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="7" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="8" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" grp="1" drct="1" stat="9" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocSymNum" hard="-1" usr="1" grp="1" drct="1" value="14"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="1" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="2" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="3" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="4" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="5" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="6" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="7" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="8" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocCSSSpaceMaxCandidates" hard="-1" usr="128" grp="1" drct="1" stat="9" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="64" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="2" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="2" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="3" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" usr="1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciIdentifier" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschMaxCodeWordsPerDCI" hard="-1" drct="1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" usr="1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocAPMapDataReal" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gSSPbchSCOffs" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="2" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="2" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="3" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="3" value="6"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="4" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="4" value="8"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="6" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="7" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="7" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="8" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="8" value="7"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="2" grp="1" drct="1" stat="9" value="7"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="3" grp="1" drct="1" stat="9" value="7"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" usr="1" grp="1" drct="1" stat="9" value="9"/>
+<Parameter pid="IdPDbNr5gUserAllocDciHarqProc" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlState" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRBNum" hard="-1" value="242"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRBNum" hard="-1" chan="1" value="242"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRBNum" hard="-1" drct="1" chan="1" value="242"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschDmrsTypeAAddPosIdx" hard="-1" drct="1" chan="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdcchIntRnti" hard="-1" value="9575"/>
+<Parameter pid="IdPDbNr5gCfrCancelPulseBw" hard="-1" value="30720000"/>
+<Parameter pid="IdPDbNr5gUserSlBwpRBNum" hard="-1" chan="1" value="270"/>
+<Parameter pid="IdPDbNr5gUserSlBwpRBNum" hard="-1" value="242"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocContent" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocCSDmrsScramState" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschDmrsTypeAMaxLen" hard="-1" drct="1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gNumUsers" hard="-1" value="2"/>
+<Parameter pid="IdPDbNr5gUserDschChaCoding" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDschChaCoding" hard="-1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocState" hard="-1" usr="1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="1" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="2" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="3" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="4" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="5" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="6" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="7" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="8" value="3"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFmt" hard="-1" grp="1" drct="1" stat="9" value="3"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" value="2"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gNumUserAlloc" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="2" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="2" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="3" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciNDI_TB1" hard="-1" usr="1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="1" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="2" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="3" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="4" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="5" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="6" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="7" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="8" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciRNTI" hard="-1" grp="1" drct="1" stat="9" value="9575"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="1" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="2" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="3" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="4" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="5" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="6" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="7" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="8" value="38"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPatternLength" hard="-1" grp="1" drct="1" stat="9" value="38"/>
+<Parameter pid="IdPDbNr5gSSPbchPosition" hard="-1" value="#$AAAAgA==" len="4"/>
+<Parameter pid="IdPDbNr5gSSPbchNumerology" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCCEIdx" hard="-1" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gNumUserDlBwp" hard="-1" chan="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcScs" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcScs" hard="-1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcScs" hard="-1" drct="1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciCreatePDSCH" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gNumSSPbchAPMappings" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschVrbPrbInterleaver" hard="-1" drct="1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserUlBwpRBNum" hard="-1" value="242"/>
+<Parameter pid="IdPDbNr5gUserUlBwpRBNum" hard="-1" chan="1" value="242"/>
+<Parameter pid="IdPDbNr5gUserAllocSlotFmt" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" stat="1" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="1" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="2" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="2" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="3" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="3" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="4" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="4" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="5" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="6" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="6" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="7" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="7" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="8" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="2" grp="1" drct="1" stat="5" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="5" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="8" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="2" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="3" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" usr="1" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciMCS_TB1" hard="-1" grp="1" drct="1" stat="1" value="4"/>
+<Parameter pid="IdPDbNr5gCarrierSCSUse" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gCarrierSCSUse" hard="-1" stat="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" value="#$gIDxwAAAAAA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="2" value="#$gIDxwAAAAIA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="3" value="#$gIDxwAAAAMA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="4" value="#$gYDxwAAAAAA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="5" value="#$kIDxwAAAAAA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="6" value="#$kIDxwAAAAEA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="7" value="#$kIDxwAAAAIA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="8" value="#$kIDxwAAAAMA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="9" value="#$kYDxwAAAAAA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciPattern" hard="-1" grp="1" drct="1" stat="1" value="#$gIDxwAAAAEA=" len="46"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="2" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="3" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="4" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="5" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="6" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="7" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="8" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="9" value="4"/>
+<Parameter pid="IdPDbNr5gUserAllocDciAggLvl" hard="-1" grp="1" drct="1" stat="1" value="4"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcId" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcId" hard="-1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpRmcId" hard="-1" drct="1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" value="101"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" stat="1" value="101"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="1" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="2" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="2" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="3" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="3" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="4" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="4" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="5" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="6" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="6" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="7" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="7" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="8" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="2" grp="1" drct="1" stat="5" value="75"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="5" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="8" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="2" grp="1" drct="1" stat="9" value="75"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="3" grp="1" drct="1" stat="9" value="75"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="9" value="483"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" usr="1" grp="1" drct="1" stat="9" value="265"/>
+<Parameter pid="IdPDbNr5gUserAllocDciFreqDomResAssign" hard="-1" grp="1" drct="1" stat="1" value="483"/>
+<Parameter pid="IdPDbNr5gRestrictToSearchSpace" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschUseScramIDState" hard="-1" drct="1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserId" hard="-1" value="9575"/>
+<Parameter pid="IdPDbNr5gUserId" hard="-1" chan="1" value="9575"/>
+<Parameter pid="IdPDbNr5gPowerMode" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschDmrsTypeBAddPosIdx" hard="-1" drct="1" chan="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="2" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="5" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="6" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="7" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="8" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="9" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="3" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" stat="4" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlSize" hard="-1" usr="1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" usr="1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocPXschPtrsMode" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="64" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="2" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="3" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="4" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="6" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="7" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="2" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="5" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="8" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="2" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="3" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" usr="1" grp="1" drct="1" stat="9" value="1"/>
+<Parameter pid="IdPDbNr5gUserAllocDciBWPInd" hard="-1" grp="1" drct="1" stat="1" value="1"/>
+<Parameter pid="IdPDbNr5gUserDlBwpNumerology" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpNumerology" hard="-1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpNumerology" hard="-1" drct="1" chan="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="2" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="3" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="4" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="5" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="6" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="7" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="8" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" grp="1" drct="1" stat="9" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocSymOffs" hard="-1" usr="1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserDlBwpPdschDmrsTypeBMaxLen" hard="-1" drct="1" chan="1" value="1"/>
+<Parameter pid="IdPDbNr5gPrsResourceSetNumRB" hard="-1" value="36"/>
+<Parameter pid="IdPDbNr5gSSPbchRBOffs" hard="-1" value="111"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" usr="1" grp="1" drct="1" value="242"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="1" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="2" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="3" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="4" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="5" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="6" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="7" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="8" value="240"/>
+<Parameter pid="IdPDbNr5gUserAllocRBNum" hard="-1" grp="1" drct="1" stat="9" value="240"/>
+<Parameter pid="IdPDbNr5gUserDlBwpInd" hard="-1" value="1"/>
+<Parameter pid="IdPDbNr5gCarrierChanBw" hard="-1" value="19"/>
+<Parameter pid="IdPDbNr5gDummyReNumerology" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gSSPbchCase" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="1" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="2" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="3" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="5" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="6" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="7" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="8" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="9" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocCSIntlBundleSize" hard="-1" grp="1" drct="1" stat="4" value="2"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" usr="1" grp="1" drct="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="1" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="2" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="3" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="4" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="5" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="6" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="7" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="8" value="0"/>
+<Parameter pid="IdPDbNr5gUserAllocRepetition" hard="-1" grp="1" drct="1" stat="9" value="0"/>
+<Parameter pid="IdPDbNr5gUserSlBwpNumerology" hard="-1" value="0"/>
+<Parameter pid="IdPDbNr5gUserSlBwpNumerology" hard="-1" chan="1" value="0"/>
+<Loadable name="Nr5gPlugin" group="89," pmVersion="1,">
+<NR5G_VERSION>23.06</NR5G_VERSION>
+</Loadable>
+</Checksum>
+</Database>
+</Module>
+</Instrument>
+</Root>
