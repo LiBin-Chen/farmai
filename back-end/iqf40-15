@@ -1,0 +1,12 @@
+ Waveform [20ms, no OCNG] - mu = 0, NRB = 216 [BW40MHz SCS15KHz], CellID = 0
+ - phase comp off
+ - SS-PBCH:  Case A, Lmax = 4, 10ms periodicicty
+             Freq offset =    0.0 kHz
+ - PDCCH:  216RB, C-RNTI = 9575
+           slots allocated: 1-9
+           PDCCH interleaved,   N_CORESET_REG = 48, REG_BUNDLE_SIZE = 6, INTERLEAVER_SIZE = 2, NSHIFT = 0
+           PDCCH CCE candidate 3 [L=4]
+ - PDSCH:  216RB, MCS-4 [QPSK on table 1], dmrsTypeApos = 2, dmrsmaxlen = 1, dmrsaddpos = 2, dmrscfgtpe = 1, NidNscid = 0, Nscid = 0
+           slots allocated: 1-9
+           syms allocated 2-13 [0/1 reserved for PDCCH]
+           TBS = 3368 (DMRS symbols do not contain PDSCH)
